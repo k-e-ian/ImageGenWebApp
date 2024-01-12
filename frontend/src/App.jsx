@@ -81,11 +81,12 @@ function App() {
             <img
               src={generatedImage}
               alt={`Generated ${imageId}`}
+              className='responsive-image'
             />
           </div>
           <div className='image-url'>
-          <code>
-            Generated image URL:{' '}
+          <code className='image-url'>
+              Generated image URL:{' '}
             <a
               href={generatedImage}
               target="_blank"
