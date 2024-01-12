@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import request from 'superagent';
 import { BounceLoader } from 'react-spinners';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   const [prompt, setPrompt] = useState('');
@@ -41,7 +43,8 @@ function App() {
 
 
   return (
-    <div>
+    <>
+      <Header />
       <div className='img-gen-div'>
         <h1>Image Generator</h1>
         <div className='img-gen-input'>
@@ -72,7 +75,7 @@ function App() {
       {generatedImage && (
         <div className='image-div'>
           <div className='image-name'>
-            <code>Generated image with id: <span className='image-id'>{imageId}</span></code>
+            <code>Generated image id: <span className='image-id'>{imageId}</span></code>
           </div>
           <div className='image'>
             <img
@@ -97,7 +100,8 @@ function App() {
           </div>
         </div>
       )}
-    </div>
+      <Footer />
+    </>
   );
 }
 

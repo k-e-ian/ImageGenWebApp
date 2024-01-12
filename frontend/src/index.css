@@ -2,6 +2,51 @@
   background-color: #cbcff3;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'DrWeb Bold';
+  src: url('https://clevertech.biz/_next/static/media/drweb-bold.1d8c9d14.woff') format('woff');
+  /* You can add other font formats (e.g., woff2) for better browser compatibility */
+}
+
+@font-face {
+  font-family: 'Basis Grotesque Regular Pro';
+  src: url('https://clevertech.biz/_next/static/media/basis-grotesque-regular-pro.1e211fad.woff2') format('woff2');
+  /* Add additional font formats as needed for browser compatibility */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Basis Grotesque Regular Pro', "karla";
+  color: #460b38;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  padding: 20px;
+  box-shadow: 0px 2.98246px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+
+.header--title {
+  font-size: 20px; /*20px / 16 === 1.25rem*/
+  background:rgba(197, 219, 254, 0.5);
+  border-radius: 15%;
+  padding: 10px;
+  text-align: center;
+  font-family: "DrWeb Bold";
+  cursor: pointer;
+  
+}
+
 .img-gen-div {
   align-items: center;
   justify-content: center;
@@ -11,20 +56,14 @@
 }
 
 .img-gen-input {
-  display: flex;
-  width: 400px; 
-  margin: 0 auto; /* Center the container */
   border-radius: 15px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the box-shadow as needed */
   overflow: hidden; /* Ensure border-radius and box-shadow are applied properly */
 }
 
 .img-gen-input input {
-  flex: 1;
   padding: 10px;
   border: none;
-  border-radius: 0; /* Remove input border-radius */
-  outline: none;
 }
 
 .img-gen-input button {
@@ -44,9 +83,7 @@
 
 .image-div,
 .image-url {
-  padding-top: 20px;
   margin-bottom: 20px;
-  border-top: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,26 +101,32 @@
 }
 
 img {
-  max-width: 512px;
-  max-height: 512px;
   border-radius: 15px;
-  border: 8px solid burlywood; /* Set border to transparent */
-  border-image-slice: 1; /* Ensure the entire border is covered by the gradient */
+  border: 4px solid burlywood; /* Set border to transparent */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
 }
 
 .image-link {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: inline-block;
-  max-width: 100%;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .image-link:hover {
   color: rgb(96, 210, 172);
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
+
+footer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid black;
+  font-family:'Basis Grotesque Regular Pro', "karla";
+}
+
 
