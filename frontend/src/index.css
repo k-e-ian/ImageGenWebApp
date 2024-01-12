@@ -1,0 +1,89 @@
+:root {
+  background-color: #cbcff3;
+}
+
+.img-gen-div {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.img-gen-input {
+  display: flex;
+  width: 400px; 
+  margin: 0 auto; /* Center the container */
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the box-shadow as needed */
+  overflow: hidden; /* Ensure border-radius and box-shadow are applied properly */
+}
+
+.img-gen-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 0; /* Remove input border-radius */
+  outline: none;
+}
+
+.img-gen-input button {
+  padding: 10px;
+  background-color: rgb(96, 210, 172);
+  color: #fff;
+  border: none;
+  border-radius: 0 15px 15px 0; /* Adjust button border-radius to match the container */
+  cursor: pointer;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-div,
+.image-url {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image-id,
+.error {
+  font-style: italic;
+}
+
+.image-name,
+.image {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 512px;
+  max-height: 512px;
+  border-radius: 15px;
+  border: 8px solid burlywood; /* Set border to transparent */
+  border-image-slice: 1; /* Ensure the entire border is covered by the gradient */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.image-link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.image-link:hover {
+  color: rgb(96, 210, 172);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
